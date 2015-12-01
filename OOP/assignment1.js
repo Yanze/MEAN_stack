@@ -9,24 +9,28 @@ function Vehicle(name, numberOfWheels, numPassengers, speed) {
   this.numPassengers = numPassengers;
   this.speed = speed;
   this.makeNoise = function() {
-      return "Default noise";
-    },
-    this.move = function() {
-      updateDistanceTravelled();
-      this.makeNoise();
-    },
-    this.checkMiles = function() {
-      console.log(distance_travelled);
-    }
+    return "Default noise";
+  };
+  this.move = function() {
+    updateDistanceTravelled();
+    this.makeNoise();
+  };
+  this.checkMiles = function() {
+    console.log(distance_travelled);
+  };
 }
 
-// var Bike = new Vehicle("Bike", 2, 2, 25);
-// Bike.makeNoise = "ring ring!";
-// console.log(Bike);
-//
-// var Sedan = new Vehicle("Sedan", 4, 4, 85);
-// Sedan.makeNoise = "Honk Honk!";
-// console.log(Sedan);
+var Bike = new Vehicle("Bike", 2, 2, 25);
+Bike.makeNoise = function() {
+  return "ring ring!";
+};
+
+console.log(Bike.makeNoise());
+
+var Sedan = new Vehicle("Sedan", 4, 4, 85);
+Sedan.makeNoise = function() {
+  return "Honk Honk!";
+};
 
 var Bus = new Vehicle("Bus", 4, 20, 45);
 console.log(Bus);

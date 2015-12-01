@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fundamental part 1</title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    //console log each element of an array
+    var x = [3, 5, 'Dojo', 'rocks', 'Michael', 'Sensei'];
+    for (var i = 0; i < x.length; i++) {
+      console.log(x[i]);
+    }
+
+    // add value
+    x.push(100);
+
+    // add a new array to x
+    x.push([1, 2]);
+    console.log(x);
+
+    // get sum
+    var sum = 0;
+    for (var i = 1; i < 500; i++) {
+      sum += i;
+    }
+    console.log(sum);
+
+    // find the min value
+    var arr = [1, 5, 90, 25, -3, 0];
+    function finMin(arr) {
+      var min = arr[0];
+      for (var i = 1; i < arr.length; i++) {
+        if (min > arr[i]) {
+          min = arr[i];
+        }
+      }
+      console.log(min);
+    }
+    finMin(arr);
+
+    // find average
+    function finAve(arr) {
+      var sum = arr.reduce(function(a, b) {
+        return a + b;
+      });
+      console.log(sum / arr.length);
+    }
+    finAve(arr);
+
+  </script>
+</body>
+
+</html>

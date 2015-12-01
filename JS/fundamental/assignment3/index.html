@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fundamental part 1</title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    //console log each element of an array
+    function loopArr(arr) {
+      for (var i = 0; i < x.length; i++) {
+        console.log(x[i]);
+      }
+    }
+    var x = [3, 5, 'Dojo', 'rocks', 'Michael', 'Sensei'];
+    loopArr(arr);
+
+
+    // get sum
+    function sum(num) {
+      var sum = 0;
+      for (var i = 1; i < num; i++) {
+        sum += i;
+      }
+    }
+    console.log(sum(500));
+
+    // find the min value
+    var arr = [1, 5, 90, 25, -3, 0];
+
+    function finMin(arr) {
+      var min = arr[0];
+      for (var i = 1; i < arr.length; i++) {
+        if (min > arr[i]) {
+          min = arr[i];
+        }
+      }
+      return min;
+    }
+    console.log(finMin(arr));
+    // find average
+    function finAve(arr) {
+      var sum = arr.reduce(function(a, b) {
+        return a + b;
+      });
+      return sum / arr.length;
+    }
+    console.log(finAve(arr));
+
+    // create a person object
+
+    var Person = {
+      name: "Trey",
+      distance_travelled: 0,
+      say_name: function() {
+        alert(this.name);
+      },
+      say_something: function(str) {
+        console.log("Trey says: " + str);
+      },
+      walk: function() {
+        console.log("Trey is walking");
+        this.distance_travelled += 3;
+      },
+      run: function() {
+        console.log("Trey is running");
+        this.distance_travelled += 10;
+      },
+      crawl: function() {
+        console.log("Trey is crawling");
+        this.distance_travelled += 1;
+      }
+    }
+    Person.run();
+    console.log(Person.distance_travelled);
+  </script>
+</body>
+
+</html>

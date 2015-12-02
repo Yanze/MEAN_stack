@@ -9,7 +9,7 @@ function Deck() {
 
   this.getCards = function() {
     return cards;
-  }
+  };
 
   this.reset = function() {
     cards = []; // remove remaining cards;
@@ -45,7 +45,6 @@ function Deck() {
 
 }
 
-
 function Player(name, deck) {
   this.name = name;
   this.deck = deck;
@@ -53,12 +52,17 @@ function Player(name, deck) {
   this.takeaCard = function() {
     this.hand.push(this.deck.deal());
   };
-  this.discard = function(n) {
+
+  this.discard = function(card) {
     if (n > this.hand.length) {
       return;
     }
-    this.hand.splice(n, 1);
-  }
+    for(var i = 0; i < this.hand.length; i++){
+      if(this.hand[i] === card){
+        return this.hand.splice(i, 1);
+      }
+    }
+  };
 }
 
 var deck = new Deck();
@@ -66,9 +70,7 @@ deck.reset();
 deck.shuffle();
 player1 = new Player("Dodo", deck);
 
-
 player1.takeaCard();
-
 
 console.log(player1.hand);
 player1.takeaCard();

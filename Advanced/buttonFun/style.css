@@ -1,0 +1,30 @@
+.red{
+  background: red;
+  color: white;
+}
+.red:focus,
+.red:hover{
+  background: red;
+  color: white;
+}
+.blue{
+  background: blue;
+  color: white;
+}
+.blue:focus,
+.blue:hover{
+  background: blue;
+  color: white;
+}
+body{
+  margin: 40px ;
+}
+.green{
+  background: rgb(89, 172, 76);
+  color: white;
+}
+.green:focus,
+.green:hover{
+  background: rgb(89, 172, 76);
+  color: white;
+}
